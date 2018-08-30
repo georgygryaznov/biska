@@ -1,0 +1,1 @@
+%BI_HOME%pdi-ce-8.1.0.0-365\data-integration\kitchen.bat /file:%BI_HOME%crm_calls_old\crm_all_calls_to_mysql.kjb /level:Debug > %BI_HOME%crm_calls_old\log.txt 2> %BI_HOME%crm_calls_old\log2.txt
