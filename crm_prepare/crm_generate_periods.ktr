@@ -670,6 +670,13 @@
         <item>91</item>
         <item>short</item>
       </line>
+      <line>
+        <item/>
+        <item/>
+        <item>0</item>
+        <item>0</item>
+        <item>allshort</item>
+      </line>
     </data>
     <cluster_schema/>
     <remotesteps>
@@ -697,7 +704,7 @@
     </partitioning>
     <formula>
       <field_name>datefrom</field_name>
-      <formula_string>java.time.LocalDate.now().withDayOfMonth(1).minusMonths(2).plusDays(detach_from).toString()</formula_string>
+      <formula_string>java.time.LocalDate.now().withDayOfMonth(1).minusMonths(type.equals("allshort") ? 1 : 2).plusDays(detach_from).toString()</formula_string>
       <value_type>String</value_type>
       <value_length>-1</value_length>
       <value_precision>-1</value_precision>
@@ -705,7 +712,7 @@
     </formula>
     <formula>
       <field_name>dateto</field_name>
-      <formula_string>type.equals("all") ? java.time.LocalDate.now().toString() : java.time.LocalDate.now().withDayOfMonth(1).minusMonths(2).plusDays(detach_to).toString()//java.time.LocalDate.now().withDayOfMonth(java.time.LocalDate.now().lengthOfMonth()).toString()//new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date())</formula_string>
+      <formula_string>type.contains("all") ? java.time.LocalDate.now().toString() : java.time.LocalDate.now().withDayOfMonth(1).minusMonths(2).plusDays(detach_to).toString()  //java.time.LocalDate.now().withDayOfMonth(java.time.LocalDate.now().lengthOfMonth()).toString()//new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date())</formula_string>
       <value_type>String</value_type>
       <value_length>-1</value_length>
       <value_precision>-1</value_precision>
