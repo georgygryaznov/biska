@@ -1,0 +1,622 @@
+DEBUG: Using PENTAHO_JAVA_HOME
+DEBUG: _PENTAHO_JAVA_HOME=C:\Program Files\Java\jre1.8.0_171
+DEBUG: _PENTAHO_JAVA=C:\Program Files\Java\jre1.8.0_171\bin\java.exe
+
+C:\Perspektiva\pdi-ce-8.1.0.0-365\data-integration>"C:\Program Files\Java\jre1.8.0_171\bin\java.exe"  "-Xms1024m" "-Xmx2048m" "-XX:MaxPermSize=256m" "-Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2" "-Djava.library.path=libswt\win64" "-DKETTLE_HOME=" "-DKETTLE_REPOSITORY=" "-DKETTLE_USER=" "-DKETTLE_PASSWORD=" "-DKETTLE_PLUGIN_PACKAGES=" "-DKETTLE_LOG_SIZE_LIMIT=" "-DKETTLE_JNDI_ROOT=" -jar launcher\launcher.jar -lib ..\libswt\win64  -main org.pentaho.di.kitchen.Kitchen -initialDir "C:\Perspektiva\crm_prepare"\ /file:C:\Perspektiva\crm_prepare\crm_prepare.kjb /level:Debug 
+01:51:37,506 INFO  [KarafBoot] Checking to see if org.pentaho.clean.karaf.cache is enabled
+01:51:41,691 INFO  [KarafInstance] 
+*******************************************************************************
+*** Karaf Instance Number: 2 at C:\Perspektiva\pdi-ce-8.1.0.0-365\data-inte ***
+***   gration\.\system\karaf\caches\kitchen\data-1                          ***
+*** FastBin Provider Port:52902                                             ***
+*** Karaf Port:8803                                                         ***
+*** OSGI Service Port:9052                                                  ***
+*******************************************************************************
+2018/09/27 01:51:48 - Kitchen - Logging is at level : Debug
+2018/09/27 01:51:48 - Kitchen - Start of run.
+2018/09/27 01:51:48 - Kitchen - Allocate new job.
+2018/09/27 01:51:48 - Kitchen - Parsing command line options.
+C:\Perspektiva\Pentaho_DI\pdi-ce-8.1.0.0-365\data-integration\system\karaf\deploy does not exist, please create it.
+Root path does not exist: C:\Perspektiva\Pentaho_DI\pdi-ce-8.1.0.0-365\data-integration\system\karaf\deploy
+Updating configuration from org.apache.aries.rsa.provider.fastbin.cfg
+Updating configuration from org.apache.karaf.shell.cfg
+Updating configuration from org.ops4j.pax.web.cfg
+2018/09/27 01:52:03 - crm_prepare - Start of job execution
+2018/09/27 01:52:03 - crm_prepare - exec(0, 0, START.0)
+2018/09/27 01:52:03 - START - Starting job entry
+2018/09/27 01:52:03 - crm_prepare - Starting entry [Transformation]
+2018/09/27 01:52:03 - crm_prepare - exec(1, 0, Transformation.0)
+2018/09/27 01:52:03 - Transformation - Starting job entry
+2018/09/27 01:52:03 - Transformation - Opening transformation: [file:///C:/Perspektiva/crm_prepare/crm_auth.ktr]
+2018/09/27 01:52:03 - Transformation - Loading transformation from XML file [file:///C:/Perspektiva/crm_prepare/crm_auth.ktr]
+2018/09/27 01:52:04 - Transformation - Starting transformation...(file=${Internal.Entry.Current.Directory}/crm_auth.ktr, name=Transformation, repinfo=null)
+2018/09/27 01:52:04 - Transformation - Using run configuration [Pentaho local]
+2018/09/27 01:52:04 - Transformation - Using legacy execution engine
+2018/09/27 01:52:04 - crm_auth - Transformation is pre-loaded.
+2018/09/27 01:52:04 - crm_auth - nr of steps to run : 10  , nr of hops : 9
+2018/09/27 01:52:04 - crm_auth - Dispatching started for transformation [crm_auth]
+2018/09/27 01:52:04 - crm_auth - Nr of arguments detected:0 
+2018/09/27 01:52:04 - crm_auth - This is not a replay transformation
+2018/09/27 01:52:04 - crm_auth - I found 10 different steps to launch.
+2018/09/27 01:52:04 - crm_auth - Allocating rowsets...
+2018/09/27 01:52:04 - crm_auth -  Allocating rowsets for step 0 --> ExtractAuthCookies 2
+2018/09/27 01:52:04 - crm_auth -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:04 - crm_auth - Transformation allocated new rowset [ExtractAuthCookies 2.0 - Switch / Case 2.0]
+2018/09/27 01:52:04 - crm_auth -  Allocated 1 rowsets for step 0 --> ExtractAuthCookies 2  
+2018/09/27 01:52:04 - crm_auth -  Allocating rowsets for step 1 --> Switch / Case 2
+2018/09/27 01:52:04 - crm_auth -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:04 - crm_auth - Transformation allocated new rowset [Switch / Case 2.0 - Dummy (do nothing).0]
+2018/09/27 01:52:04 - crm_auth -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:04 - crm_auth - Transformation allocated new rowset [Switch / Case 2.0 - Transformation Executor 2.0]
+2018/09/27 01:52:04 - crm_auth -  Allocated 3 rowsets for step 1 --> Switch / Case 2  
+2018/09/27 01:52:04 - crm_auth -  Allocating rowsets for step 2 --> Get System Info
+2018/09/27 01:52:04 - crm_auth -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:04 - crm_auth - Transformation allocated new rowset [Get System Info.0 - ExtractAuthCookies 2.0]
+2018/09/27 01:52:04 - crm_auth -  Allocated 4 rowsets for step 2 --> Get System Info  
+2018/09/27 01:52:04 - crm_auth -  Allocating rowsets for step 3 --> Switch / Case
+2018/09/27 01:52:04 - crm_auth -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:04 - crm_auth - Transformation allocated new rowset [Switch / Case.0 - Table input.0]
+2018/09/27 01:52:04 - crm_auth -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:04 - crm_auth - Transformation allocated new rowset [Switch / Case.0 - Transformation Executor.0]
+2018/09/27 01:52:04 - crm_auth -  Allocated 6 rowsets for step 3 --> Switch / Case  
+2018/09/27 01:52:04 - crm_auth -  Allocating rowsets for step 4 --> Table input
+2018/09/27 01:52:04 - crm_auth -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:04 - crm_auth - Transformation allocated new rowset [Table input.0 - Get System Info.0]
+2018/09/27 01:52:04 - crm_auth -  Allocated 7 rowsets for step 4 --> Table input  
+2018/09/27 01:52:04 - crm_auth -  Allocating rowsets for step 5 --> Table input 2
+2018/09/27 01:52:04 - crm_auth -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:04 - crm_auth - Transformation allocated new rowset [Table input 2.0 - ExtractAuthCookies 2 2.0]
+2018/09/27 01:52:04 - crm_auth -  Allocated 8 rowsets for step 5 --> Table input 2  
+2018/09/27 01:52:04 - crm_auth -  Allocating rowsets for step 6 --> ExtractAuthCookies 2 2
+2018/09/27 01:52:04 - crm_auth -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:04 - crm_auth - Transformation allocated new rowset [ExtractAuthCookies 2 2.0 - Switch / Case.0]
+2018/09/27 01:52:04 - crm_auth -  Allocated 9 rowsets for step 6 --> ExtractAuthCookies 2 2  
+2018/09/27 01:52:04 - crm_auth -  Allocating rowsets for step 7 --> Dummy (do nothing)
+2018/09/27 01:52:04 - crm_auth -  Allocated 9 rowsets for step 7 --> Dummy (do nothing)  
+2018/09/27 01:52:04 - crm_auth -  Allocating rowsets for step 8 --> Transformation Executor
+2018/09/27 01:52:04 - crm_auth -  Allocated 9 rowsets for step 8 --> Transformation Executor  
+2018/09/27 01:52:04 - crm_auth -  Allocating rowsets for step 9 --> Transformation Executor 2
+2018/09/27 01:52:04 - crm_auth -  Allocated 9 rowsets for step 9 --> Transformation Executor 2  
+2018/09/27 01:52:04 - crm_auth - Allocating Steps & StepData...
+2018/09/27 01:52:04 - crm_auth -  Transformation is about to allocate step [ExtractAuthCookies 2] of type [Janino]
+2018/09/27 01:52:04 - crm_auth -   Step has nrcopies=1
+2018/09/27 01:52:04 - ExtractAuthCookies 2.0 - distribution activated
+2018/09/27 01:52:04 - ExtractAuthCookies 2.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:04 - ExtractAuthCookies 2.0 - Step info: nrinput=1 nroutput=1
+2018/09/27 01:52:04 - ExtractAuthCookies 2.0 - Got previous step from [ExtractAuthCookies 2] #0 --> Get System Info
+2018/09/27 01:52:04 - ExtractAuthCookies 2.0 - input rel is 1:1
+2018/09/27 01:52:04 - ExtractAuthCookies 2.0 - Found input rowset [Get System Info.0 - ExtractAuthCookies 2.0]
+2018/09/27 01:52:04 - ExtractAuthCookies 2.0 - output rel. is  1:1
+2018/09/27 01:52:04 - ExtractAuthCookies 2.0 - Found output rowset [ExtractAuthCookies 2.0 - Switch / Case 2.0]
+2018/09/27 01:52:04 - ExtractAuthCookies 2.0 - Finished dispatching
+2018/09/27 01:52:04 - crm_auth -  Transformation has allocated a new step: [ExtractAuthCookies 2].0
+2018/09/27 01:52:04 - crm_auth -  Transformation is about to allocate step [Switch / Case 2] of type [SwitchCase]
+2018/09/27 01:52:04 - crm_auth -   Step has nrcopies=1
+2018/09/27 01:52:04 - Switch / Case 2.0 - distribution activated
+2018/09/27 01:52:04 - Switch / Case 2.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:04 - Switch / Case 2.0 - Step info: nrinput=1 nroutput=2
+2018/09/27 01:52:04 - Switch / Case 2.0 - Got previous step from [Switch / Case 2] #0 --> ExtractAuthCookies 2
+2018/09/27 01:52:04 - Switch / Case 2.0 - input rel is 1:1
+2018/09/27 01:52:04 - Switch / Case 2.0 - Found input rowset [ExtractAuthCookies 2.0 - Switch / Case 2.0]
+2018/09/27 01:52:04 - Switch / Case 2.0 - output rel. is  1:1
+2018/09/27 01:52:04 - Switch / Case 2.0 - Found output rowset [Switch / Case 2.0 - Dummy (do nothing).0]
+2018/09/27 01:52:04 - Switch / Case 2.0 - output rel. is  1:1
+2018/09/27 01:52:04 - Switch / Case 2.0 - Found output rowset [Switch / Case 2.0 - Transformation Executor 2.0]
+2018/09/27 01:52:04 - Switch / Case 2.0 - Finished dispatching
+2018/09/27 01:52:04 - crm_auth -  Transformation has allocated a new step: [Switch / Case 2].0
+2018/09/27 01:52:04 - crm_auth -  Transformation is about to allocate step [Get System Info] of type [SystemInfo]
+2018/09/27 01:52:04 - crm_auth -   Step has nrcopies=1
+2018/09/27 01:52:04 - Get System Info.0 - distribution activated
+2018/09/27 01:52:04 - Get System Info.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:04 - Get System Info.0 - Step info: nrinput=1 nroutput=1
+2018/09/27 01:52:04 - Get System Info.0 - Got previous step from [Get System Info] #0 --> Table input
+2018/09/27 01:52:04 - Get System Info.0 - input rel is 1:1
+2018/09/27 01:52:04 - Get System Info.0 - Found input rowset [Table input.0 - Get System Info.0]
+2018/09/27 01:52:04 - Get System Info.0 - output rel. is  1:1
+2018/09/27 01:52:04 - Get System Info.0 - Found output rowset [Get System Info.0 - ExtractAuthCookies 2.0]
+2018/09/27 01:52:04 - Get System Info.0 - Finished dispatching
+2018/09/27 01:52:04 - crm_auth -  Transformation has allocated a new step: [Get System Info].0
+2018/09/27 01:52:04 - crm_auth -  Transformation is about to allocate step [Switch / Case] of type [SwitchCase]
+2018/09/27 01:52:04 - crm_auth -   Step has nrcopies=1
+2018/09/27 01:52:04 - Switch / Case.0 - distribution activated
+2018/09/27 01:52:04 - Switch / Case.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:04 - Switch / Case.0 - Step info: nrinput=1 nroutput=2
+2018/09/27 01:52:04 - Switch / Case.0 - Got previous step from [Switch / Case] #0 --> ExtractAuthCookies 2 2
+2018/09/27 01:52:04 - Switch / Case.0 - input rel is 1:1
+2018/09/27 01:52:04 - Switch / Case.0 - Found input rowset [ExtractAuthCookies 2 2.0 - Switch / Case.0]
+2018/09/27 01:52:04 - Switch / Case.0 - output rel. is  1:1
+2018/09/27 01:52:04 - Switch / Case.0 - Found output rowset [Switch / Case.0 - Table input.0]
+2018/09/27 01:52:04 - Switch / Case.0 - output rel. is  1:1
+2018/09/27 01:52:04 - Switch / Case.0 - Found output rowset [Switch / Case.0 - Transformation Executor.0]
+2018/09/27 01:52:04 - Switch / Case.0 - Finished dispatching
+2018/09/27 01:52:04 - crm_auth -  Transformation has allocated a new step: [Switch / Case].0
+2018/09/27 01:52:04 - crm_auth -  Transformation is about to allocate step [Table input] of type [TableInput]
+2018/09/27 01:52:04 - crm_auth -   Step has nrcopies=1
+2018/09/27 01:52:04 - Table input.0 - distribution activated
+2018/09/27 01:52:04 - Table input.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:04 - Table input.0 - Step info: nrinput=1 nroutput=1
+2018/09/27 01:52:04 - Table input.0 - Got previous step from [Table input] #0 --> Switch / Case
+2018/09/27 01:52:04 - Table input.0 - input rel is 1:1
+2018/09/27 01:52:04 - Table input.0 - Found input rowset [Switch / Case.0 - Table input.0]
+2018/09/27 01:52:04 - Table input.0 - output rel. is  1:1
+2018/09/27 01:52:04 - Table input.0 - Found output rowset [Table input.0 - Get System Info.0]
+2018/09/27 01:52:04 - Table input.0 - Finished dispatching
+2018/09/27 01:52:04 - crm_auth -  Transformation has allocated a new step: [Table input].0
+2018/09/27 01:52:04 - crm_auth -  Transformation is about to allocate step [Table input 2] of type [TableInput]
+2018/09/27 01:52:04 - crm_auth -   Step has nrcopies=1
+2018/09/27 01:52:04 - Table input 2.0 - distribution activated
+2018/09/27 01:52:04 - Table input 2.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:04 - Table input 2.0 - Step info: nrinput=0 nroutput=1
+2018/09/27 01:52:04 - Table input 2.0 - output rel. is  1:1
+2018/09/27 01:52:04 - Table input 2.0 - Found output rowset [Table input 2.0 - ExtractAuthCookies 2 2.0]
+2018/09/27 01:52:04 - Table input 2.0 - Finished dispatching
+2018/09/27 01:52:04 - crm_auth -  Transformation has allocated a new step: [Table input 2].0
+2018/09/27 01:52:04 - crm_auth -  Transformation is about to allocate step [ExtractAuthCookies 2 2] of type [Janino]
+2018/09/27 01:52:04 - crm_auth -   Step has nrcopies=1
+2018/09/27 01:52:04 - ExtractAuthCookies 2 2.0 - distribution activated
+2018/09/27 01:52:04 - ExtractAuthCookies 2 2.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:04 - ExtractAuthCookies 2 2.0 - Step info: nrinput=1 nroutput=1
+2018/09/27 01:52:04 - ExtractAuthCookies 2 2.0 - Got previous step from [ExtractAuthCookies 2 2] #0 --> Table input 2
+2018/09/27 01:52:04 - ExtractAuthCookies 2 2.0 - input rel is 1:1
+2018/09/27 01:52:04 - ExtractAuthCookies 2 2.0 - Found input rowset [Table input 2.0 - ExtractAuthCookies 2 2.0]
+2018/09/27 01:52:04 - ExtractAuthCookies 2 2.0 - output rel. is  1:1
+2018/09/27 01:52:04 - ExtractAuthCookies 2 2.0 - Found output rowset [ExtractAuthCookies 2 2.0 - Switch / Case.0]
+2018/09/27 01:52:04 - ExtractAuthCookies 2 2.0 - Finished dispatching
+2018/09/27 01:52:04 - crm_auth -  Transformation has allocated a new step: [ExtractAuthCookies 2 2].0
+2018/09/27 01:52:04 - crm_auth -  Transformation is about to allocate step [Dummy (do nothing)] of type [Dummy]
+2018/09/27 01:52:04 - crm_auth -   Step has nrcopies=1
+2018/09/27 01:52:04 - Dummy (do nothing).0 - distribution activated
+2018/09/27 01:52:04 - Dummy (do nothing).0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:04 - Dummy (do nothing).0 - Step info: nrinput=1 nroutput=0
+2018/09/27 01:52:04 - Dummy (do nothing).0 - Got previous step from [Dummy (do nothing)] #0 --> Switch / Case 2
+2018/09/27 01:52:04 - Dummy (do nothing).0 - input rel is 1:1
+2018/09/27 01:52:04 - Dummy (do nothing).0 - Found input rowset [Switch / Case 2.0 - Dummy (do nothing).0]
+2018/09/27 01:52:04 - Dummy (do nothing).0 - Finished dispatching
+2018/09/27 01:52:04 - crm_auth -  Transformation has allocated a new step: [Dummy (do nothing)].0
+2018/09/27 01:52:04 - crm_auth -  Transformation is about to allocate step [Transformation Executor] of type [TransExecutor]
+2018/09/27 01:52:04 - crm_auth -   Step has nrcopies=1
+2018/09/27 01:52:04 - Transformation Executor.0 - distribution activated
+2018/09/27 01:52:04 - Transformation Executor.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:04 - Transformation Executor.0 - Step info: nrinput=1 nroutput=0
+2018/09/27 01:52:04 - Transformation Executor.0 - Got previous step from [Transformation Executor] #0 --> Switch / Case
+2018/09/27 01:52:04 - Transformation Executor.0 - input rel is 1:1
+2018/09/27 01:52:04 - Transformation Executor.0 - Found input rowset [Switch / Case.0 - Transformation Executor.0]
+2018/09/27 01:52:04 - Transformation Executor.0 - Finished dispatching
+2018/09/27 01:52:04 - crm_auth -  Transformation has allocated a new step: [Transformation Executor].0
+2018/09/27 01:52:04 - crm_auth -  Transformation is about to allocate step [Transformation Executor 2] of type [TransExecutor]
+2018/09/27 01:52:04 - crm_auth -   Step has nrcopies=1
+2018/09/27 01:52:04 - Transformation Executor 2.0 - distribution activated
+2018/09/27 01:52:04 - Transformation Executor 2.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:04 - Transformation Executor 2.0 - Step info: nrinput=1 nroutput=0
+2018/09/27 01:52:04 - Transformation Executor 2.0 - Got previous step from [Transformation Executor 2] #0 --> Switch / Case 2
+2018/09/27 01:52:04 - Transformation Executor 2.0 - input rel is 1:1
+2018/09/27 01:52:04 - Transformation Executor 2.0 - Found input rowset [Switch / Case 2.0 - Transformation Executor 2.0]
+2018/09/27 01:52:04 - Transformation Executor 2.0 - Finished dispatching
+2018/09/27 01:52:04 - crm_auth -  Transformation has allocated a new step: [Transformation Executor 2].0
+2018/09/27 01:52:04 - crm_auth - This transformation can be replayed with replay date: 2018/09/27 01:52:04
+2018/09/27 01:52:04 - crm_auth - Initialising 10 steps...
+2018/09/27 01:52:04 - Transformation Executor.0 - Released server socket on port 0
+2018/09/27 01:52:04 - Table input 2.0 - Released server socket on port 0
+2018/09/27 01:52:04 - Switch / Case 2.0 - Released server socket on port 0
+2018/09/27 01:52:04 - Get System Info.0 - Released server socket on port 0
+2018/09/27 01:52:04 - Switch / Case.0 - Released server socket on port 0
+2018/09/27 01:52:04 - ExtractAuthCookies 2 2.0 - Released server socket on port 0
+2018/09/27 01:52:04 - Transformation Executor 2.0 - Released server socket on port 0
+2018/09/27 01:52:04 - ExtractAuthCookies 2.0 - Released server socket on port 0
+2018/09/27 01:52:04 - Table input.0 - Released server socket on port 0
+2018/09/27 01:52:04 - ifsusum8.beget.tech - New database connection defined
+2018/09/27 01:52:04 - ifsusum8.beget.tech - New database connection defined
+2018/09/27 01:52:04 - Dummy (do nothing).0 - Released server socket on port 0
+2018/09/27 01:52:06 - Table input 2.0 - Connected to database...
+2018/09/27 01:52:06 - Table input.0 - Connected to database...
+2018/09/27 01:52:06 - crm_auth - Step [ExtractAuthCookies 2.0] initialized flawlessly.
+2018/09/27 01:52:06 - crm_auth - Step [Switch / Case 2.0] initialized flawlessly.
+2018/09/27 01:52:06 - crm_auth - Step [Get System Info.0] initialized flawlessly.
+2018/09/27 01:52:06 - crm_auth - Step [Switch / Case.0] initialized flawlessly.
+2018/09/27 01:52:06 - crm_auth - Step [Table input.0] initialized flawlessly.
+2018/09/27 01:52:06 - crm_auth - Step [Table input 2.0] initialized flawlessly.
+2018/09/27 01:52:06 - crm_auth - Step [ExtractAuthCookies 2 2.0] initialized flawlessly.
+2018/09/27 01:52:06 - crm_auth - Step [Dummy (do nothing).0] initialized flawlessly.
+2018/09/27 01:52:06 - crm_auth - Step [Transformation Executor.0] initialized flawlessly.
+2018/09/27 01:52:06 - crm_auth - Step [Transformation Executor 2.0] initialized flawlessly.
+2018/09/27 01:52:06 - Switch / Case.0 - Starting to run...
+2018/09/27 01:52:06 - ExtractAuthCookies 2.0 - Starting to run...
+2018/09/27 01:52:06 - Switch / Case 2.0 - Starting to run...
+2018/09/27 01:52:06 - Dummy (do nothing).0 - Starting to run...
+2018/09/27 01:52:06 - Table input.0 - Starting to run...
+2018/09/27 01:52:06 - Table input.0 - SQL query : SELECT
+  cookie
+, tokenshort
+, expires
+FROM persp_last_cookies
+
+2018/09/27 01:52:06 - Table input 2.0 - Starting to run...
+2018/09/27 01:52:06 - Table input 2.0 - SQL query : SELECT count(1) as cookie_existo
+FROM persp_last_cookies
+
+2018/09/27 01:52:06 - Transformation Executor.0 - Starting to run...
+2018/09/27 01:52:06 - ExtractAuthCookies 2 2.0 - Starting to run...
+2018/09/27 01:52:06 - Get System Info.0 - Starting to run...
+2018/09/27 01:52:06 - Transformation Executor 2.0 - Starting to run...
+2018/09/27 01:52:06 - crm_auth - Transformation has allocated 10 threads and 9 rowsets.
+2018/09/27 01:52:06 - Table input.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:06 - Table input.0 - Finished reading query, closing connection.
+2018/09/27 01:52:06 - Table input 2.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:06 - Table input 2.0 - Finished reading query, closing connection.
+2018/09/27 01:52:06 - ifsusum8.beget.tech - Connection to database closed!
+2018/09/27 01:52:06 - ifsusum8.beget.tech - Connection to database closed!
+2018/09/27 01:52:06 - Table input.0 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+2018/09/27 01:52:06 - Table input 2.0 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+2018/09/27 01:52:06 - Get System Info.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:06 - Get System Info.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/09/27 01:52:06 - ExtractAuthCookies 2.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:06 - ExtractAuthCookies 2.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/09/27 01:52:06 - ExtractAuthCookies 2 2.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:06 - ExtractAuthCookies 2 2.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/09/27 01:52:06 - Switch / Case 2.0 - Signaling 'output done' to 2 output rowsets.
+2018/09/27 01:52:06 - Switch / Case 2.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/09/27 01:52:06 - Switch / Case.0 - Signaling 'output done' to 2 output rowsets.
+2018/09/27 01:52:06 - Transformation Executor 2.0 - Signaling 'output done' to 0 output rowsets.
+2018/09/27 01:52:06 - Switch / Case.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/09/27 01:52:06 - Transformation Executor 2.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2018/09/27 01:52:06 - Dummy (do nothing).0 - Signaling 'output done' to 0 output rowsets.
+2018/09/27 01:52:06 - Transformation Executor.0 - Signaling 'output done' to 0 output rowsets.
+2018/09/27 01:52:06 - Dummy (do nothing).0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/09/27 01:52:06 - Transformation Executor.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2018/09/27 01:52:06 - crm_auth - searching for annotations
+2018/09/27 01:52:06 - crm_auth - no annotations found
+2018/09/27 01:52:06 - crm_prepare - Starting entry [Transformation 2]
+2018/09/27 01:52:06 - crm_prepare - exec(2, 0, Transformation 2.0)
+2018/09/27 01:52:06 - Transformation 2 - Starting job entry
+2018/09/27 01:52:06 - Transformation 2 - Opening transformation: [file:///C:/Perspektiva/crm_prepare/crm_generate_periods.ktr]
+2018/09/27 01:52:06 - Transformation 2 - Loading transformation from XML file [file:///C:/Perspektiva/crm_prepare/crm_generate_periods.ktr]
+2018/09/27 01:52:06 - Transformation 2 - Starting transformation...(file=${Internal.Entry.Current.Directory}/crm_generate_periods.ktr, name=Transformation 2, repinfo=null)
+2018/09/27 01:52:06 - Transformation 2 - Using run configuration [Pentaho local]
+2018/09/27 01:52:06 - Transformation 2 - Using legacy execution engine
+2018/09/27 01:52:06 - crm_generate_periods - Transformation is pre-loaded.
+2018/09/27 01:52:06 - crm_generate_periods - nr of steps to run : 3  , nr of hops : 2
+2018/09/27 01:52:06 - crm_generate_periods - Dispatching started for transformation [crm_generate_periods]
+2018/09/27 01:52:06 - crm_generate_periods - Nr of arguments detected:0 
+2018/09/27 01:52:06 - crm_generate_periods - This is not a replay transformation
+2018/09/27 01:52:06 - crm_generate_periods - I found 3 different steps to launch.
+2018/09/27 01:52:06 - crm_generate_periods - Allocating rowsets...
+2018/09/27 01:52:06 - crm_generate_periods -  Allocating rowsets for step 0 --> Data Grid
+2018/09/27 01:52:06 - crm_generate_periods -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:06 - crm_generate_periods - Transformation allocated new rowset [Data Grid.0 - GetCalllogParams 2.0]
+2018/09/27 01:52:06 - crm_generate_periods -  Allocated 1 rowsets for step 0 --> Data Grid  
+2018/09/27 01:52:06 - crm_generate_periods -  Allocating rowsets for step 1 --> GetCalllogParams 2
+2018/09/27 01:52:06 - crm_generate_periods -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:06 - crm_generate_periods - Transformation allocated new rowset [GetCalllogParams 2.0 - Table output.0]
+2018/09/27 01:52:06 - crm_generate_periods -  Allocated 2 rowsets for step 1 --> GetCalllogParams 2  
+2018/09/27 01:52:06 - crm_generate_periods -  Allocating rowsets for step 2 --> Table output
+2018/09/27 01:52:06 - crm_generate_periods -  Allocated 2 rowsets for step 2 --> Table output  
+2018/09/27 01:52:06 - crm_generate_periods - Allocating Steps & StepData...
+2018/09/27 01:52:06 - crm_generate_periods -  Transformation is about to allocate step [Data Grid] of type [DataGrid]
+2018/09/27 01:52:06 - crm_generate_periods -   Step has nrcopies=1
+2018/09/27 01:52:06 - Data Grid.0 - distribution activated
+2018/09/27 01:52:06 - Data Grid.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:06 - Data Grid.0 - Step info: nrinput=0 nroutput=1
+2018/09/27 01:52:06 - Data Grid.0 - output rel. is  1:1
+2018/09/27 01:52:06 - Data Grid.0 - Found output rowset [Data Grid.0 - GetCalllogParams 2.0]
+2018/09/27 01:52:06 - Data Grid.0 - Finished dispatching
+2018/09/27 01:52:06 - crm_generate_periods -  Transformation has allocated a new step: [Data Grid].0
+2018/09/27 01:52:06 - crm_generate_periods -  Transformation is about to allocate step [GetCalllogParams 2] of type [Janino]
+2018/09/27 01:52:06 - crm_generate_periods -   Step has nrcopies=1
+2018/09/27 01:52:06 - GetCalllogParams 2.0 - distribution de-activated
+2018/09/27 01:52:06 - GetCalllogParams 2.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:06 - GetCalllogParams 2.0 - Step info: nrinput=1 nroutput=1
+2018/09/27 01:52:06 - GetCalllogParams 2.0 - Got previous step from [GetCalllogParams 2] #0 --> Data Grid
+2018/09/27 01:52:06 - GetCalllogParams 2.0 - input rel is 1:1
+2018/09/27 01:52:06 - GetCalllogParams 2.0 - Found input rowset [Data Grid.0 - GetCalllogParams 2.0]
+2018/09/27 01:52:06 - GetCalllogParams 2.0 - output rel. is  1:1
+2018/09/27 01:52:06 - GetCalllogParams 2.0 - Found output rowset [GetCalllogParams 2.0 - Table output.0]
+2018/09/27 01:52:06 - GetCalllogParams 2.0 - Finished dispatching
+2018/09/27 01:52:06 - crm_generate_periods -  Transformation has allocated a new step: [GetCalllogParams 2].0
+2018/09/27 01:52:06 - crm_generate_periods -  Transformation is about to allocate step [Table output] of type [TableOutput]
+2018/09/27 01:52:06 - crm_generate_periods -   Step has nrcopies=1
+2018/09/27 01:52:06 - Table output.0 - distribution activated
+2018/09/27 01:52:06 - Table output.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:06 - Table output.0 - Step info: nrinput=1 nroutput=0
+2018/09/27 01:52:06 - Table output.0 - Got previous step from [Table output] #0 --> GetCalllogParams 2
+2018/09/27 01:52:06 - Table output.0 - input rel is 1:1
+2018/09/27 01:52:06 - Table output.0 - Found input rowset [GetCalllogParams 2.0 - Table output.0]
+2018/09/27 01:52:06 - Table output.0 - Finished dispatching
+2018/09/27 01:52:06 - crm_generate_periods -  Transformation has allocated a new step: [Table output].0
+2018/09/27 01:52:06 - crm_generate_periods - This transformation can be replayed with replay date: 2018/09/27 01:52:06
+2018/09/27 01:52:06 - crm_generate_periods - Initialising 3 steps...
+2018/09/27 01:52:06 - Data Grid.0 - Released server socket on port 0
+2018/09/27 01:52:06 - GetCalllogParams 2.0 - Released server socket on port 0
+2018/09/27 01:52:06 - Table output.0 - Released server socket on port 0
+2018/09/27 01:52:06 - ifsusum8.beget.tech - New database connection defined
+2018/09/27 01:52:07 - Table output.0 - Connected to database [ifsusum8.beget.tech] (commit=1000)
+2018/09/27 01:52:07 - ifsusum8.beget.tech - Auto commit off
+2018/09/27 01:52:07 - crm_generate_periods - Step [Data Grid.0] initialized flawlessly.
+2018/09/27 01:52:07 - crm_generate_periods - Step [GetCalllogParams 2.0] initialized flawlessly.
+2018/09/27 01:52:07 - crm_generate_periods - Step [Table output.0] initialized flawlessly.
+2018/09/27 01:52:07 - Table output.0 - Starting to run...
+2018/09/27 01:52:07 - Data Grid.0 - Starting to run...
+2018/09/27 01:52:07 - crm_generate_periods - Transformation has allocated 3 threads and 2 rowsets.
+2018/09/27 01:52:07 - Data Grid.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:07 - Data Grid.0 - Finished processing (I=0, O=0, R=0, W=15, U=0, E=0)
+2018/09/27 01:52:07 - GetCalllogParams 2.0 - Starting to run...
+2018/09/27 01:52:07 - GetCalllogParams 2.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:07 - GetCalllogParams 2.0 - Finished processing (I=0, O=0, R=15, W=15, U=0, E=0)
+2018/09/27 01:52:08 - Table output.0 - Prepared statement : INSERT INTO persp_report_period (date_from, date_to, type) VALUES ( ?,  ?,  ?)
+2018/09/27 01:52:08 - ifsusum8.beget.tech - Commit on database connection [ifsusum8.beget.tech]
+2018/09/27 01:52:08 - Table output.0 - Signaling 'output done' to 0 output rowsets.
+2018/09/27 01:52:08 - ifsusum8.beget.tech - Commit on database connection [ifsusum8.beget.tech]
+2018/09/27 01:52:08 - ifsusum8.beget.tech - Connection to database closed!
+2018/09/27 01:52:08 - Table output.0 - Finished processing (I=0, O=15, R=15, W=15, U=0, E=0)
+2018/09/27 01:52:08 - crm_generate_periods - searching for annotations
+2018/09/27 01:52:08 - crm_generate_periods - no annotations found
+2018/09/27 01:52:08 - crm_prepare - Starting entry [Transformation 3]
+2018/09/27 01:52:08 - crm_prepare - exec(3, 0, Transformation 3.0)
+2018/09/27 01:52:08 - Transformation 3 - Starting job entry
+2018/09/27 01:52:08 - Transformation 3 - Opening transformation: [file:///C:/Perspektiva/crm_prepare/crm_get_employees.ktr]
+2018/09/27 01:52:08 - Transformation 3 - Loading transformation from XML file [file:///C:/Perspektiva/crm_prepare/crm_get_employees.ktr]
+2018/09/27 01:52:09 - Transformation 3 - Starting transformation...(file=${Internal.Entry.Current.Directory}/crm_get_employees.ktr, name=Transformation 3, repinfo=null)
+2018/09/27 01:52:09 - Transformation 3 - Using run configuration [Pentaho local]
+2018/09/27 01:52:09 - Transformation 3 - Using legacy execution engine
+2018/09/27 01:52:09 - crm_get_employees - Transformation is pre-loaded.
+2018/09/27 01:52:09 - crm_get_employees - nr of steps to run : 10  , nr of hops : 9
+2018/09/27 01:52:09 - crm_get_employees - Dispatching started for transformation [crm_get_employees]
+2018/09/27 01:52:09 - crm_get_employees - Nr of arguments detected:0 
+2018/09/27 01:52:09 - crm_get_employees - This is not a replay transformation
+2018/09/27 01:52:09 - crm_get_employees - I found 10 different steps to launch.
+2018/09/27 01:52:09 - crm_get_employees - Allocating rowsets...
+2018/09/27 01:52:09 - crm_get_employees -  Allocating rowsets for step 0 --> HTTP get
+2018/09/27 01:52:09 - crm_get_employees -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:09 - crm_get_employees - Transformation allocated new rowset [HTTP get.0 - TrimCalllogResult.0]
+2018/09/27 01:52:09 - crm_get_employees -  Allocated 1 rowsets for step 0 --> HTTP get  
+2018/09/27 01:52:09 - crm_get_employees -  Allocating rowsets for step 1 --> TrimCalllogResult
+2018/09/27 01:52:09 - crm_get_employees -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:09 - crm_get_employees - Transformation allocated new rowset [TrimCalllogResult.0 - TrimCalllogResult 3.0]
+2018/09/27 01:52:09 - crm_get_employees -  Allocated 2 rowsets for step 1 --> TrimCalllogResult  
+2018/09/27 01:52:09 - crm_get_employees -  Allocating rowsets for step 2 --> TrimCalllogResult 3
+2018/09/27 01:52:09 - crm_get_employees -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:09 - crm_get_employees - Transformation allocated new rowset [TrimCalllogResult 3.0 - Get data from XML.0]
+2018/09/27 01:52:09 - crm_get_employees -  Allocated 3 rowsets for step 2 --> TrimCalllogResult 3  
+2018/09/27 01:52:09 - crm_get_employees -  Allocating rowsets for step 3 --> Get data from XML
+2018/09/27 01:52:09 - crm_get_employees -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:09 - crm_get_employees - Transformation allocated new rowset [Get data from XML.0 - Table output.0]
+2018/09/27 01:52:09 - crm_get_employees -  Allocated 4 rowsets for step 3 --> Get data from XML  
+2018/09/27 01:52:09 - crm_get_employees -  Allocating rowsets for step 4 --> Table input 2
+2018/09/27 01:52:09 - crm_get_employees -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:09 - crm_get_employees - Transformation allocated new rowset [Table input 2.0 - Join Rows (cartesian product).0]
+2018/09/27 01:52:09 - crm_get_employees -  Allocated 5 rowsets for step 4 --> Table input 2  
+2018/09/27 01:52:09 - crm_get_employees -  Allocating rowsets for step 5 --> Join Rows (cartesian product)
+2018/09/27 01:52:09 - crm_get_employees -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:09 - crm_get_employees - Transformation allocated new rowset [Join Rows (cartesian product).0 - TrimCalllogResult 2.0]
+2018/09/27 01:52:09 - crm_get_employees -  Allocated 6 rowsets for step 5 --> Join Rows (cartesian product)  
+2018/09/27 01:52:09 - crm_get_employees -  Allocating rowsets for step 6 --> Table input 2 2
+2018/09/27 01:52:09 - crm_get_employees -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:09 - crm_get_employees - Transformation allocated new rowset [Table input 2 2.0 - Join Rows (cartesian product).0]
+2018/09/27 01:52:09 - crm_get_employees -  Allocated 7 rowsets for step 6 --> Table input 2 2  
+2018/09/27 01:52:09 - crm_get_employees -  Allocating rowsets for step 7 --> TrimCalllogResult 2
+2018/09/27 01:52:09 - crm_get_employees -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:09 - crm_get_employees - Transformation allocated new rowset [TrimCalllogResult 2.0 - TrimCalllogResult 2 2.0]
+2018/09/27 01:52:09 - crm_get_employees -  Allocated 8 rowsets for step 7 --> TrimCalllogResult 2  
+2018/09/27 01:52:09 - crm_get_employees -  Allocating rowsets for step 8 --> TrimCalllogResult 2 2
+2018/09/27 01:52:09 - crm_get_employees -   prevcopies = 1, nextcopies=1
+2018/09/27 01:52:09 - crm_get_employees - Transformation allocated new rowset [TrimCalllogResult 2 2.0 - HTTP get.0]
+2018/09/27 01:52:09 - crm_get_employees -  Allocated 9 rowsets for step 8 --> TrimCalllogResult 2 2  
+2018/09/27 01:52:09 - crm_get_employees -  Allocating rowsets for step 9 --> Table output
+2018/09/27 01:52:09 - crm_get_employees -  Allocated 9 rowsets for step 9 --> Table output  
+2018/09/27 01:52:09 - crm_get_employees - Allocating Steps & StepData...
+2018/09/27 01:52:09 - crm_get_employees -  Transformation is about to allocate step [HTTP get] of type [HTTP]
+2018/09/27 01:52:09 - crm_get_employees -   Step has nrcopies=1
+2018/09/27 01:52:09 - HTTP get.0 - distribution de-activated
+2018/09/27 01:52:09 - HTTP get.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:09 - HTTP get.0 - Step info: nrinput=1 nroutput=1
+2018/09/27 01:52:09 - HTTP get.0 - Got previous step from [HTTP get] #0 --> TrimCalllogResult 2 2
+2018/09/27 01:52:09 - HTTP get.0 - input rel is 1:1
+2018/09/27 01:52:09 - HTTP get.0 - Found input rowset [TrimCalllogResult 2 2.0 - HTTP get.0]
+2018/09/27 01:52:09 - HTTP get.0 - output rel. is  1:1
+2018/09/27 01:52:09 - HTTP get.0 - Found output rowset [HTTP get.0 - TrimCalllogResult.0]
+2018/09/27 01:52:09 - HTTP get.0 - Finished dispatching
+2018/09/27 01:52:09 - crm_get_employees -  Transformation has allocated a new step: [HTTP get].0
+2018/09/27 01:52:09 - crm_get_employees -  Transformation is about to allocate step [TrimCalllogResult] of type [Janino]
+2018/09/27 01:52:09 - crm_get_employees -   Step has nrcopies=1
+2018/09/27 01:52:09 - TrimCalllogResult.0 - distribution de-activated
+2018/09/27 01:52:09 - TrimCalllogResult.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:09 - TrimCalllogResult.0 - Step info: nrinput=1 nroutput=1
+2018/09/27 01:52:09 - TrimCalllogResult.0 - Got previous step from [TrimCalllogResult] #0 --> HTTP get
+2018/09/27 01:52:09 - TrimCalllogResult.0 - input rel is 1:1
+2018/09/27 01:52:09 - TrimCalllogResult.0 - Found input rowset [HTTP get.0 - TrimCalllogResult.0]
+2018/09/27 01:52:09 - TrimCalllogResult.0 - output rel. is  1:1
+2018/09/27 01:52:09 - TrimCalllogResult.0 - Found output rowset [TrimCalllogResult.0 - TrimCalllogResult 3.0]
+2018/09/27 01:52:09 - TrimCalllogResult.0 - Finished dispatching
+2018/09/27 01:52:09 - crm_get_employees -  Transformation has allocated a new step: [TrimCalllogResult].0
+2018/09/27 01:52:09 - crm_get_employees -  Transformation is about to allocate step [TrimCalllogResult 3] of type [Janino]
+2018/09/27 01:52:09 - crm_get_employees -   Step has nrcopies=1
+2018/09/27 01:52:09 - TrimCalllogResult 3.0 - distribution de-activated
+2018/09/27 01:52:09 - TrimCalllogResult 3.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:09 - TrimCalllogResult 3.0 - Step info: nrinput=1 nroutput=1
+2018/09/27 01:52:09 - TrimCalllogResult 3.0 - Got previous step from [TrimCalllogResult 3] #0 --> TrimCalllogResult
+2018/09/27 01:52:09 - TrimCalllogResult 3.0 - input rel is 1:1
+2018/09/27 01:52:09 - TrimCalllogResult 3.0 - Found input rowset [TrimCalllogResult.0 - TrimCalllogResult 3.0]
+2018/09/27 01:52:09 - TrimCalllogResult 3.0 - output rel. is  1:1
+2018/09/27 01:52:09 - TrimCalllogResult 3.0 - Found output rowset [TrimCalllogResult 3.0 - Get data from XML.0]
+2018/09/27 01:52:09 - TrimCalllogResult 3.0 - Finished dispatching
+2018/09/27 01:52:09 - crm_get_employees -  Transformation has allocated a new step: [TrimCalllogResult 3].0
+2018/09/27 01:52:09 - crm_get_employees -  Transformation is about to allocate step [Get data from XML] of type [getXMLData]
+2018/09/27 01:52:09 - crm_get_employees -   Step has nrcopies=1
+2018/09/27 01:52:09 - Get data from XML.0 - distribution activated
+2018/09/27 01:52:09 - Get data from XML.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:09 - Get data from XML.0 - Step info: nrinput=1 nroutput=1
+2018/09/27 01:52:09 - Get data from XML.0 - Got previous step from [Get data from XML] #0 --> TrimCalllogResult 3
+2018/09/27 01:52:09 - Get data from XML.0 - input rel is 1:1
+2018/09/27 01:52:09 - Get data from XML.0 - Found input rowset [TrimCalllogResult 3.0 - Get data from XML.0]
+2018/09/27 01:52:09 - Get data from XML.0 - output rel. is  1:1
+2018/09/27 01:52:09 - Get data from XML.0 - Found output rowset [Get data from XML.0 - Table output.0]
+2018/09/27 01:52:09 - Get data from XML.0 - Finished dispatching
+2018/09/27 01:52:09 - crm_get_employees -  Transformation has allocated a new step: [Get data from XML].0
+2018/09/27 01:52:09 - crm_get_employees -  Transformation is about to allocate step [Table input 2] of type [TableInput]
+2018/09/27 01:52:09 - crm_get_employees -   Step has nrcopies=1
+2018/09/27 01:52:09 - Table input 2.0 - distribution activated
+2018/09/27 01:52:09 - Table input 2.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:09 - Table input 2.0 - Step info: nrinput=0 nroutput=1
+2018/09/27 01:52:09 - Table input 2.0 - output rel. is  1:1
+2018/09/27 01:52:09 - Table input 2.0 - Found output rowset [Table input 2.0 - Join Rows (cartesian product).0]
+2018/09/27 01:52:09 - Table input 2.0 - Finished dispatching
+2018/09/27 01:52:09 - crm_get_employees -  Transformation has allocated a new step: [Table input 2].0
+2018/09/27 01:52:09 - crm_get_employees -  Transformation is about to allocate step [Join Rows (cartesian product)] of type [JoinRows]
+2018/09/27 01:52:09 - crm_get_employees -   Step has nrcopies=1
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - distribution activated
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - Step info: nrinput=2 nroutput=1
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - Got previous step from [Join Rows (cartesian product)] #0 --> Table input 2
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - input rel is 1:1
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - Found input rowset [Table input 2.0 - Join Rows (cartesian product).0]
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - Got previous step from [Join Rows (cartesian product)] #1 --> Table input 2 2
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - input rel is 1:1
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - Found input rowset [Table input 2 2.0 - Join Rows (cartesian product).0]
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - output rel. is  1:1
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - Found output rowset [Join Rows (cartesian product).0 - TrimCalllogResult 2.0]
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - Finished dispatching
+2018/09/27 01:52:09 - crm_get_employees -  Transformation has allocated a new step: [Join Rows (cartesian product)].0
+2018/09/27 01:52:09 - crm_get_employees -  Transformation is about to allocate step [Table input 2 2] of type [TableInput]
+2018/09/27 01:52:09 - crm_get_employees -   Step has nrcopies=1
+2018/09/27 01:52:09 - Table input 2 2.0 - distribution activated
+2018/09/27 01:52:09 - Table input 2 2.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:09 - Table input 2 2.0 - Step info: nrinput=0 nroutput=1
+2018/09/27 01:52:09 - Table input 2 2.0 - output rel. is  1:1
+2018/09/27 01:52:09 - Table input 2 2.0 - Found output rowset [Table input 2 2.0 - Join Rows (cartesian product).0]
+2018/09/27 01:52:09 - Table input 2 2.0 - Finished dispatching
+2018/09/27 01:52:09 - crm_get_employees -  Transformation has allocated a new step: [Table input 2 2].0
+2018/09/27 01:52:09 - crm_get_employees -  Transformation is about to allocate step [TrimCalllogResult 2] of type [Janino]
+2018/09/27 01:52:09 - crm_get_employees -   Step has nrcopies=1
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - distribution de-activated
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - Step info: nrinput=1 nroutput=1
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - Got previous step from [TrimCalllogResult 2] #0 --> Join Rows (cartesian product)
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - input rel is 1:1
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - Found input rowset [Join Rows (cartesian product).0 - TrimCalllogResult 2.0]
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - output rel. is  1:1
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - Found output rowset [TrimCalllogResult 2.0 - TrimCalllogResult 2 2.0]
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - Finished dispatching
+2018/09/27 01:52:09 - crm_get_employees -  Transformation has allocated a new step: [TrimCalllogResult 2].0
+2018/09/27 01:52:09 - crm_get_employees -  Transformation is about to allocate step [TrimCalllogResult 2 2] of type [Janino]
+2018/09/27 01:52:09 - crm_get_employees -   Step has nrcopies=1
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - distribution de-activated
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - Step info: nrinput=1 nroutput=1
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - Got previous step from [TrimCalllogResult 2 2] #0 --> TrimCalllogResult 2
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - input rel is 1:1
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - Found input rowset [TrimCalllogResult 2.0 - TrimCalllogResult 2 2.0]
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - output rel. is  1:1
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - Found output rowset [TrimCalllogResult 2 2.0 - HTTP get.0]
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - Finished dispatching
+2018/09/27 01:52:09 - crm_get_employees -  Transformation has allocated a new step: [TrimCalllogResult 2 2].0
+2018/09/27 01:52:09 - crm_get_employees -  Transformation is about to allocate step [Table output] of type [TableOutput]
+2018/09/27 01:52:09 - crm_get_employees -   Step has nrcopies=1
+2018/09/27 01:52:09 - Table output.0 - distribution activated
+2018/09/27 01:52:09 - Table output.0 - Starting allocation of buffers & new threads...
+2018/09/27 01:52:09 - Table output.0 - Step info: nrinput=1 nroutput=0
+2018/09/27 01:52:09 - Table output.0 - Got previous step from [Table output] #0 --> Get data from XML
+2018/09/27 01:52:09 - Table output.0 - input rel is 1:1
+2018/09/27 01:52:09 - Table output.0 - Found input rowset [Get data from XML.0 - Table output.0]
+2018/09/27 01:52:09 - Table output.0 - Finished dispatching
+2018/09/27 01:52:09 - crm_get_employees -  Transformation has allocated a new step: [Table output].0
+2018/09/27 01:52:09 - crm_get_employees - This transformation can be replayed with replay date: 2018/09/27 01:52:09
+2018/09/27 01:52:09 - crm_get_employees - Initialising 10 steps...
+2018/09/27 01:52:09 - Table input 2 2.0 - Released server socket on port 0
+2018/09/27 01:52:09 - Get data from XML.0 - Released server socket on port 0
+2018/09/27 01:52:09 - TrimCalllogResult 3.0 - Released server socket on port 0
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - Released server socket on port 0
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - Released server socket on port 0
+2018/09/27 01:52:09 - Table input 2.0 - Released server socket on port 0
+2018/09/27 01:52:09 - HTTP get.0 - Released server socket on port 0
+2018/09/27 01:52:09 - ifsusum8.beget.tech - New database connection defined
+2018/09/27 01:52:09 - TrimCalllogResult.0 - Released server socket on port 0
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - Released server socket on port 0
+2018/09/27 01:52:09 - Table output.0 - Released server socket on port 0
+2018/09/27 01:52:09 - ifsusum8.beget.tech - New database connection defined
+2018/09/27 01:52:09 - ifsusum8.beget.tech - New database connection defined
+2018/09/27 01:52:09 - Get data from XML.0 - Looping Xpath is : /start/tr
+2018/09/27 01:52:09 - Table output.0 - Connected to database [ifsusum8.beget.tech] (commit=1000)
+2018/09/27 01:52:09 - Table input 2 2.0 - Connected to database...
+2018/09/27 01:52:09 - Table input 2.0 - Connected to database...
+2018/09/27 01:52:09 - ifsusum8.beget.tech - Auto commit off
+2018/09/27 01:52:09 - crm_get_employees - Step [HTTP get.0] initialized flawlessly.
+2018/09/27 01:52:09 - crm_get_employees - Step [TrimCalllogResult.0] initialized flawlessly.
+2018/09/27 01:52:09 - crm_get_employees - Step [TrimCalllogResult 3.0] initialized flawlessly.
+2018/09/27 01:52:09 - crm_get_employees - Step [Get data from XML.0] initialized flawlessly.
+2018/09/27 01:52:09 - crm_get_employees - Step [Table input 2.0] initialized flawlessly.
+2018/09/27 01:52:09 - crm_get_employees - Step [Join Rows (cartesian product).0] initialized flawlessly.
+2018/09/27 01:52:09 - crm_get_employees - Step [Table input 2 2.0] initialized flawlessly.
+2018/09/27 01:52:09 - crm_get_employees - Step [TrimCalllogResult 2.0] initialized flawlessly.
+2018/09/27 01:52:09 - crm_get_employees - Step [TrimCalllogResult 2 2.0] initialized flawlessly.
+2018/09/27 01:52:09 - crm_get_employees - Step [Table output.0] initialized flawlessly.
+2018/09/27 01:52:09 - HTTP get.0 - Starting to run...
+2018/09/27 01:52:09 - TrimCalllogResult.0 - Starting to run...
+2018/09/27 01:52:09 - TrimCalllogResult 3.0 - Starting to run...
+2018/09/27 01:52:09 - Table input 2.0 - Starting to run...
+2018/09/27 01:52:09 - Table input 2.0 - SQL query : SELECT cookie
+FROM persp_last_cookies
+
+2018/09/27 01:52:09 - crm_get_employees - Transformation has allocated 10 threads and 9 rowsets.
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - Starting to run...
+2018/09/27 01:52:09 - Table output.0 - Starting to run...
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - Starting to run...
+2018/09/27 01:52:09 - Get data from XML.0 - Starting to run...
+2018/09/27 01:52:09 - Table input 2 2.0 - Starting to run...
+2018/09/27 01:52:09 - Table input 2 2.0 - SQL query : SELECT date_from,date_to
+FROM persp_report_period
+where type = "all"
+
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - Starting to run...
+2018/09/27 01:52:09 - Table input 2.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:09 - Table input 2.0 - Finished reading query, closing connection.
+2018/09/27 01:52:09 - Table input 2 2.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:09 - Table input 2 2.0 - Finished reading query, closing connection.
+2018/09/27 01:52:09 - ifsusum8.beget.tech - Connection to database closed!
+2018/09/27 01:52:09 - ifsusum8.beget.tech - Connection to database closed!
+2018/09/27 01:52:09 - Table input 2.0 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+2018/09/27 01:52:09 - Table input 2 2.0 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:09 - Join Rows (cartesian product).0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:09 - TrimCalllogResult 2.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:09 - TrimCalllogResult 2 2.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/09/27 01:52:09 - HTTP get.0 - Connecting to : [https://perspekt74.of21.net/report?type=daily&date=2018_07_01+-+2018_09_27]
+2018/09/27 01:52:10 - HTTP get.0 - Header parameter [Cookie]='PHPSESSID=3fbb0929vvrllgchu6jssp088m; YII_CSRF_TOKEN=e8a8e85a64e81e6f1b2e867ef3efc2f6558bee05s%3A88%3A%22aDd4Y3A3dUQ5d2dfdDhJeFRhMjkzSDFCZzBOYVpBZlGbK75f7Ppld4bHL-z3FeEmYt9HbJFi89W--76h_7orSA%3D%3D%22%3B; 38ab160531d48112ca6a04dfbc2e9c6d=59d4e7a6942dbf1d6efe0a6cf08b75b6e0a98a80s%3A98%3A%225411b7659154d1d746721a4974d2efad329f7ac0a%3A4%3A%7Bi%3A0%3Bs%3A3%3A%22311%22%3Bi%3A1%3Bs%3A5%3A%22admin%22%3Bi%3A2%3Bi%3A28800%3Bi%3A3%3Ba%3A0%3A%7B%7D%7D%22%3B'
+2018/09/27 01:52:10 - ifsusum8.beget.tech - Statement canceled!
+2018/09/27 01:52:10 - ifsusum8.beget.tech - Statement canceled!
+2018/09/27 01:52:10 - ifsusum8.beget.tech - Statement canceled!
+2018/09/27 01:52:10 - ifsusum8.beget.tech - Statement canceled!
+2018/09/27 01:52:10 - HTTP get.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:10 - HTTP get.0 - Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2018/09/27 01:52:10 - crm_get_employees - Transformation detected one or more steps with errors.
+2018/09/27 01:52:10 - crm_get_employees - Transformation is killing the other steps!
+2018/09/27 01:52:10 - crm_get_employees - Looking at step: HTTP get
+2018/09/27 01:52:10 - TrimCalllogResult 3.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:10 - TrimCalllogResult 3.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2018/09/27 01:52:10 - Get data from XML.0 - Finished processing files.
+2018/09/27 01:52:10 - Get data from XML.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:10 - Get data from XML.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2018/09/27 01:52:10 - TrimCalllogResult.0 - Signaling 'output done' to 1 output rowsets.
+2018/09/27 01:52:10 - TrimCalllogResult.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2018/09/27 01:52:10 - crm_get_employees - Looking at step: TrimCalllogResult
+2018/09/27 01:52:10 - crm_get_employees - Looking at step: TrimCalllogResult 3
+2018/09/27 01:52:10 - crm_get_employees - Looking at step: Get data from XML
+2018/09/27 01:52:10 - crm_get_employees - Looking at step: Table input 2
+2018/09/27 01:52:10 - crm_get_employees - Looking at step: Join Rows (cartesian product)
+2018/09/27 01:52:10 - crm_get_employees - Looking at step: Table input 2 2
+2018/09/27 01:52:10 - crm_get_employees - Looking at step: TrimCalllogResult 2
+2018/09/27 01:52:10 - crm_get_employees - Looking at step: TrimCalllogResult 2 2
+2018/09/27 01:52:10 - crm_get_employees - Looking at step: Table output
+2018/09/27 01:52:11 - Table output.0 - Signaling 'output done' to 0 output rowsets.
+2018/09/27 01:52:11 - ifsusum8.beget.tech - Commit on database connection [ifsusum8.beget.tech]
+2018/09/27 01:52:11 - ifsusum8.beget.tech - Connection to database closed!
+2018/09/27 01:52:11 - Table output.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2018/09/27 01:52:11 - crm_get_employees - searching for annotations
+2018/09/27 01:52:11 - crm_get_employees - no annotations found
+2018/09/27 01:52:11 - crm_prepare - Finished job entry [Transformation 3] (result=[false])
+2018/09/27 01:52:11 - crm_prepare - Finished job entry [Transformation 2] (result=[false])
+2018/09/27 01:52:11 - crm_prepare - Finished job entry [Transformation] (result=[false])
+2018/09/27 01:52:11 - crm_prepare - Job execution finished
+2018/09/27 01:52:11 - Kitchen - Finished!
+2018/09/27 01:52:11 - Kitchen - Start=2018/09/27 01:51:48.271, Stop=2018/09/27 01:52:11.541
+2018/09/27 01:52:11 - Kitchen - Processing ended after 23 seconds.
