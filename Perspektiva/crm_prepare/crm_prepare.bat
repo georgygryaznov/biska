@@ -1,1 +1,1 @@
-%BI_HOME%pdi-ce-8.1.0.0-365\data-integration\kitchen.bat /file:%BI_HOME%crm_prepare\crm_prepare.kjb /level:Debug > %BI_HOME%crm_prepare\log.txt 2> %BI_HOME%crm_prepare\log2.txt
+%BI_HOME%pdi-ce-8.1.0.0-365\data-integration\kitchen.bat /file:%BI_HOME%Perspektiva\crm_prepare\crm_prepare.kjb /level:Debug > log.txt 2> log2.txt
