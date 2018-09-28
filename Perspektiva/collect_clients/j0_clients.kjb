@@ -304,7 +304,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>96</xloc>
+      <xloc>32</xloc>
       <yloc>208</yloc>
     </entry>
     <entry>
@@ -577,8 +577,8 @@
       <note>В джобе проверяется, есть ли клиенты на обработку. Если есть, то запускается основной джоб</note>
       <xloc>119</xloc>
       <yloc>30</yloc>
-      <width>533</width>
-      <heigth>26</heigth>
+      <width>787</width>
+      <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
