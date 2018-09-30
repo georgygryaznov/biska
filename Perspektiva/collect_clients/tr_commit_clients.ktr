@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>crm_clients_commit</name>
+    <name>tr_commit_clients</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,16 +427,16 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2018/09/15 20:17:45.293</created_date>
+    <created_date>2018/09/30 21:56:06.336</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2018/09/15 20:17:45.293</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <modified_date>2018/09/30 21:56:06.336</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>ifsusum8.beget.tech</name>
+    <name>perspectiva</name>
     <server>ifsusum8.beget.tech</server>
     <type>MYSQL</type>
     <access>Native</access>
@@ -492,19 +492,24 @@
   </connection>
   <order>
     <hop>
-      <from>CSV file input 3 2 2</from>
-      <to>Add constants</to>
+      <from>CSV file input</from>
+      <to>Join Rows (cartesian product)</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Add constants</from>
-      <to>Table output 2 2</to>
+      <from>CSV file input 3</from>
+      <to>Join Rows (cartesian product)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Join Rows (cartesian product)</from>
+      <to>Table output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Add constants</name>
-    <type>Constant</type>
+    <name>CSV file input</name>
+    <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -513,18 +518,107 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <filename>${Internal.Entry.Current.Directory}\temp_clients.txt</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>	</separator>
+    <enclosure/>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding/>
     <fields>
       <field>
-        <name>data_table</name>
+        <name>pk</name>
         <type>String</type>
         <format/>
         <currency/>
         <decimal/>
-        <group/>
-        <nullif>persp_clients</nullif>
+        <group> </group>
         <length>-1</length>
         <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>name</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>type_status</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>assigned</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>last_time</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>region</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>groups</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>last_time2</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
       </field>
     </fields>
     <cluster_schema/>
@@ -535,13 +629,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>336</yloc>
+      <xloc>112</xloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>CSV file input 3 2 2</name>
+    <name>CSV file input 3</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -569,22 +663,11 @@
         <name>max_revision_id</name>
         <type>Integer</type>
         <format>#</format>
-        <currency/>
-        <decimal/>
+        <currency>руб.</currency>
+        <decimal>,</decimal>
         <group> </group>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>datefrom</name>
-        <type>Date</type>
-        <format>yyyy_MM_dd</format>
-        <currency/>
-        <decimal/>
-        <group> </group>
-        <length>-1</length>
-        <precision>-1</precision>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
       </field>
     </fields>
@@ -596,13 +679,49 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
-      <yloc>336</yloc>
+      <xloc>112</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table output 2 2</name>
+    <name>Join Rows (cartesian product)</name>
+    <type>JoinRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <cache_size>500</cache_size>
+    <main/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue/>
+        <function>=</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>48</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table output</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -612,9 +731,9 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>ifsusum8.beget.tech</connection>
+    <connection>perspectiva</connection>
     <schema/>
-    <table>revisions</table>
+    <table>persp_clients</table>
     <commit>300</commit>
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
@@ -631,16 +750,40 @@
     <return_field/>
     <fields>
       <field>
-        <column_name>id</column_name>
+        <column_name>pk</column_name>
+        <stream_name>pk</stream_name>
+      </field>
+      <field>
+        <column_name>name</column_name>
+        <stream_name>name</stream_name>
+      </field>
+      <field>
+        <column_name>type_status</column_name>
+        <stream_name>type_status</stream_name>
+      </field>
+      <field>
+        <column_name>assigned</column_name>
+        <stream_name>assigned</stream_name>
+      </field>
+      <field>
+        <column_name>last_time</column_name>
+        <stream_name>last_time</stream_name>
+      </field>
+      <field>
+        <column_name>region</column_name>
+        <stream_name>region</stream_name>
+      </field>
+      <field>
+        <column_name>groups</column_name>
+        <stream_name>groups</stream_name>
+      </field>
+      <field>
+        <column_name>last_time2</column_name>
+        <stream_name>last_time2</stream_name>
+      </field>
+      <field>
+        <column_name>revision_id</column_name>
         <stream_name>max_revision_id</stream_name>
-      </field>
-      <field>
-        <column_name>data_revision</column_name>
-        <stream_name>datefrom</stream_name>
-      </field>
-      <field>
-        <column_name>data_table</column_name>
-        <stream_name>data_table</stream_name>
       </field>
     </fields>
     <cluster_schema/>
@@ -651,8 +794,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>336</yloc>
+      <xloc>416</xloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
