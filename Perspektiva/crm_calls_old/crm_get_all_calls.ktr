@@ -603,11 +603,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>TrimCalllogResult 3 2 2</from>
-      <to>Switch / Case</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Switch / Case</from>
       <to>Text file output 3</to>
       <enabled>Y</enabled>
@@ -635,6 +630,11 @@
     <hop>
       <from>Filter rows 2</from>
       <to>Text file output 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>TrimCalllogResult 3 2 2</from>
+      <to>Switch / Case</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1572,8 +1572,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>416</yloc>
+      <xloc>320</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2001,8 +2001,8 @@ FROM persp_last_cookies
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>368</yloc>
+      <xloc>464</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2189,8 +2189,8 @@ FROM persp_last_cookies
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>432</yloc>
+      <xloc>464</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2377,8 +2377,8 @@ FROM persp_last_cookies
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>512</yloc>
+      <xloc>464</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2435,7 +2435,7 @@ FROM persp_last_cookies
     </partitioning>
     <formula>
       <field_name>callogresult2</field_name>
-      <formula_string>new String(callogresult).replace("&amp;nbsp;","").replace("mp3\"","mp3\"\/").replace("%2B","+").replace("number&amp;number","hhh").replace("\"avatar\"\>","\"avatar\"\>\&lt;\/img\>").replace("\&lt;div class=\"row-block\"","\&lt;!--1--\>\&lt;div class=\"row-block\"").replace("\&lt;br\>","\&lt;br\/\>")</formula_string>
+      <formula_string>new String(callogresult).replace("&amp;nbsp;","").replace("mp3\"","mp3\"\/").replace("%2B","+").replace("number&amp;number","hhh").replace("\"avatar\"\>","\"avatar\"\>\&lt;\/img\>").replace("\&lt;div class=\"row-block\"","\&lt;!--1--\>\&lt;div class=\"row-block\"").replace("\&lt;br\>","\&lt;br\/\>").replace("&amp;Carry","zCarry")</formula_string>
       <value_type>String</value_type>
       <value_length>-1</value_length>
       <value_precision>-1</value_precision>
