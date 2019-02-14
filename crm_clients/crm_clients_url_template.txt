@@ -1,1 +1,0 @@
-https://perspekt74.of21.net/client?Client[type_id]=&Client[status_id]=&Client[region_id]=&Client[group_search]=&Client[product_search]=&Client[productstatus_search]=&Client[assigned_on]=&Client[mode]=datefrom+-+dateto&Client_page=N&json=1

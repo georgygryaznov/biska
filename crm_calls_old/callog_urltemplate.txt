@@ -1,1 +1,0 @@
-https://perspekt74.of21.net/calllog?CallLog[call_type_search]=calltype&CallLog[call_datatime_search]=datefrom+-+dateto&ajax=calllog-grid&date=datefrom+-+dateto&user=0
